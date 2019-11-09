@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/navigation"
+    app:startDestination="@id/home">
+    <fragment
+        android:id="@+id/home"
+        android:name="buu.informatics.s59160102.luckyperson.home"
+        android:label="home" >
+        <action
+            android:id="@+id/action_home2_to_random2"
+            app:destination="@id/random" />
+        <action
+            android:id="@+id/action_home_to_edit2"
+            app:destination="@id/edit2" />
+    </fragment>
+    <fragment
+        android:id="@+id/random"
+        android:name="buu.informatics.s59160102.luckyperson.random"
+        android:label="random" />
+    <fragment
+        android:id="@+id/edit2"
+        android:name="buu.informatics.s59160102.luckyperson.edit"
+        android:label="edit" >
+        <action
+            android:id="@+id/action_edit2_to_add2"
+            app:destination="@id/add2" />
+    </fragment>
+    <fragment
+        android:id="@+id/add2"
+        android:name="buu.informatics.s59160102.luckyperson.add"
+        android:label="add" />
+    <fragment
+        android:id="@+id/about2"
+        android:name="buu.informatics.s59160102.luckyperson.about"
+        android:label="about" />
+</navigation>
