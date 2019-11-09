@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import buu.informatics.s59160102.luckyperson.databinding.FragmentHomeBinding
+import kotlin.random.Random
 
 /**
  * A simple [Fragment] subclass.
@@ -21,8 +22,8 @@ class home : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentHomeBinding>(inflater,
             R.layout.fragment_home,container,false)
-        binding.buttonRandom.setOnClickListener { view -> view.findNavController().navigate(R.id.action_home2_to_random2) }
-        binding.Edit.setOnClickListener { view -> view.findNavController().navigate(R.id.action_home_to_edit2) }
+        binding.buttonRandom.setOnClickListener { view -> view.findNavController().navigate(homeDirections.actionHome2ToRandom2()) }
+        binding.Edit.setOnClickListener { view -> view.findNavController().navigate(homeDirections.actionHomeToEdit2()) }
 
         setHasOptionsMenu(true)
         return binding.root
