@@ -16,7 +16,11 @@
     <fragment
         android:id="@+id/random"
         android:name="buu.informatics.s59160102.luckyperson.random"
-        android:label="random" />
+        android:label="random" >
+        <argument
+            android:name="numRandom"
+            app:argType="integer" />
+    </fragment>
     <fragment
         android:id="@+id/edit2"
         android:name="buu.informatics.s59160102.luckyperson.edit"

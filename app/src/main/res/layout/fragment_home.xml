@@ -2,6 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/home"
         android:layout_width="match_parent"
@@ -9,19 +10,12 @@
         tools:context=".home">
 
         <!-- TODO: Update blank fragment layout -->
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:text="Home"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+
+
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="19dp"
             android:text="LUCKY PERSON Home"
             app:layout_constraintBottom_toTopOf="@+id/Edit"
             app:layout_constraintEnd_toEndOf="parent"
@@ -33,22 +27,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="EDIT LIST"
-            app:layout_constraintBottom_toTopOf="@+id/insertNumePerson"
+            app:layout_constraintBottom_toTopOf="@+id/numRandom"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <EditText
-            android:id="@+id/insertNumePerson"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Selec Person"
-            app:layout_constraintBottom_toTopOf="@+id/buttonRandom"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/Edit" />
 
         <Button
             android:id="@+id/buttonRandom"
@@ -58,7 +40,18 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/insertNumePerson" />
+            app:layout_constraintTop_toBottomOf="@+id/numRandom" />
+
+        <EditText
+            android:id="@+id/numRandom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/buttonRandom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Edit" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
