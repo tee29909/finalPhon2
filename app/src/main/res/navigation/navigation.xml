@@ -28,7 +28,11 @@
     <fragment
         android:id="@+id/add2"
         android:name="buu.informatics.s59160102.luckyperson.add"
-        android:label="add" />
+        android:label="add" >
+        <action
+            android:id="@+id/action_add2_to_edit2"
+            app:destination="@id/edit2" />
+    </fragment>
     <fragment
         android:id="@+id/about2"
         android:name="buu.informatics.s59160102.luckyperson.about"
