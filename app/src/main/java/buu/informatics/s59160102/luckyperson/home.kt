@@ -1,6 +1,7 @@
 package buu.informatics.s59160102.luckyperson
 
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -22,6 +23,8 @@ class home : Fragment() {
         // Inflate the layout for this fragment
         val binding = DataBindingUtil.inflate<FragmentHomeBinding>(inflater,
             R.layout.fragment_home,container,false)
+
+
         binding.buttonRandom.setOnClickListener { view -> view.findNavController().navigate(homeDirections.actionHome2ToRandom2(numRandom.text.toString().toInt())) }
         binding.Edit.setOnClickListener { view -> view.findNavController().navigate(homeDirections.actionHomeToEdit2()) }
 
@@ -38,6 +41,7 @@ class home : Fragment() {
             view!!.findNavController())
                 || super.onOptionsItemSelected(item)
     }
+
 
 
 }
