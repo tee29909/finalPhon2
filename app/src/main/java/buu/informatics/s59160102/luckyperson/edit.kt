@@ -10,6 +10,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.findNavController
 import buu.informatics.s59160102.luckyperson.databinding.FragmentEditBinding
 import buu.informatics.s59160102.luckyperson.databinding.FragmentRandomBinding
 
@@ -27,6 +28,8 @@ class edit : Fragment() {
         val binding: FragmentEditBinding= DataBindingUtil.inflate(
             inflater, R.layout.fragment_edit, container, false)
         viewModel = ViewModelProviders.of(this).get(ViewModelEdit ::class.java)
+        binding.Add.setOnClickListener { view -> view.findNavController().navigate(editDirections.actionEdit2ToAdd2()) }
+
 
 
         setHasOptionsMenu(true)
