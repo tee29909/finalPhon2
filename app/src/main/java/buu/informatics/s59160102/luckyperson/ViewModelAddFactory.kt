@@ -3,7 +3,7 @@ package buu.informatics.s59160102.luckyperson
 import android.app.Application
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import buu.informatics.s59160102.luckyperson.Database.editDao
+import buu.informatics.s59160102.luckyperson.database.editDao
 
 class ViewModelAddFactory (
     private val dataSource: editDao,

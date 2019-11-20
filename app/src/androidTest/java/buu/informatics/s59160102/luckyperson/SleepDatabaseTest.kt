@@ -19,9 +19,9 @@ package buu.informatics.s59160102.luckyperson
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import buu.informatics.s59160102.luckyperson.Database.ListName
-import buu.informatics.s59160102.luckyperson.Database.editDao
-import buu.informatics.s59160102.luckyperson.Database.editDatabase
+import buu.informatics.s59160102.luckyperson.database.ListName
+import buu.informatics.s59160102.luckyperson.database.editDao
+import buu.informatics.s59160102.luckyperson.database.editDatabase
 import org.junit.Assert.assertEquals
 import org.junit.After
 import org.junit.Before

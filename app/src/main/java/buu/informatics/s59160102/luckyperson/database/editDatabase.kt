@@ -1,4 +1,4 @@
-package buu.informatics.s59160102.luckyperson.Database
+package buu.informatics.s59160102.luckyperson.database
 
 import android.content.Context
 import androidx.room.Database

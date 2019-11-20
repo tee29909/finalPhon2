@@ -7,19 +7,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
-import buu.informatics.s59160102.luckyperson.Database.editDatabase
+import buu.informatics.s59160102.luckyperson.database.editDatabase
 import buu.informatics.s59160102.luckyperson.databinding.FragmentEditBinding
-import buu.informatics.s59160102.luckyperson.databinding.FragmentRandomBinding
 
 /**
  * A simple [Fragment] subclass.
  */
 class edit : Fragment() {
-    private lateinit var viewModel: ViewModelEdit
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,13 +32,19 @@ class edit : Fragment() {
         val viewModelFactory = ViewModelEditFactory(dataSource,application)
 
 
+
         val ListPerson =
             ViewModelProviders.of(
                 this, viewModelFactory).get(ViewModelEdit::class.java)
 
 
         binding.viewModelEdit = ListPerson
-        binding.setLifecycleOwner(this)
+        ListPerson.name.observe(this, Observer { newSum ->
+                        binding.textView2.text = newSum.toString()
+        })
+
+
+
 
 //        val adapter = ListBankAdapter(ListBankListener { bankId ->
 //            //            Toast.makeText(context, "${bankId}", Toast.LENGTH_SHORT).show()
@@ -48,6 +52,11 @@ class edit : Fragment() {
 //        })
 
 
+        val adapter = ListBankAdapter(ListBankListener { bankId ->
+            //            Toast.makeText(context, "${bankId}", Toast.LENGTH_SHORT).show()
+            //viewModel.onBankClicked(bankId)
+
+        })
 
 
 
@@ -57,8 +66,15 @@ class edit : Fragment() {
 
         binding.Add.setOnClickListener { view -> view.findNavController().navigate(editDirections.actionEdit2ToAdd2()) }
 
+        binding.LIstPersonAll.adapter = adapter
 
 
+        ListPerson.lists.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                adapter.submitList(it)
+            }
+        })
+        binding.setLifecycleOwner(this)
         setHasOptionsMenu(true)
         return binding.root
     }

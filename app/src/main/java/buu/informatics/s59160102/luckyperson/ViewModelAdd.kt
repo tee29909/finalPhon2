@@ -1,14 +1,13 @@
 package buu.informatics.s59160102.luckyperson
 
 import android.app.Application
-import android.provider.SyncStateContract.Helpers.insert
 import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import buu.informatics.s59160102.luckyperson.Database.ListName
-import buu.informatics.s59160102.luckyperson.Database.editDao
+import buu.informatics.s59160102.luckyperson.database.ListName
+import buu.informatics.s59160102.luckyperson.database.editDao
 import kotlinx.coroutines.*
 
 class ViewModelAdd (
