@@ -2,6 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="ViewModelEdit"
+            type="buu.informatics.s59160102.luckyperson.ViewModelEdit" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/edit"
         android:layout_width="match_parent"
@@ -23,6 +28,21 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.971" />
+
+        <LinearLayout
+            android:layout_width="318dp"
+            android:layout_height="492dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/Add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/LIstPersonAll"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

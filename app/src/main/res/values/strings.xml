@@ -9,5 +9,6 @@
     <string name="Add" >Add</string>
     <string name="Sername" >Sername</string>
     <string name="Name" >Name</string>
+    <string name="RanomButton">Random</string>
 
 </resources>

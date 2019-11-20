@@ -50,12 +50,12 @@ class ViewModelAdd (
 
 
 
-
-
-
     private val _navigateToInventory = MutableLiveData<Boolean>()
     val navigateToInventory: LiveData<Boolean>
         get() = _navigateToInventory
+
+
+
     fun onSetValue(nameState:String, sernameState:String){
         _name.value = nameState
         _sername.value = sernameState

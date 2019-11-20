@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "person")
 data class ListName(
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0,
+    var id: Long = 0L,
     @ColumnInfo(name = "name")
     var name: String="",
     @ColumnInfo(name = "sername")
