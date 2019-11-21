@@ -17,7 +17,7 @@ class BankDiffCallback : DiffUtil.ItemCallback<ListName>() {
         return oldItem == newItem
     }
 }
-class ListBankAdapter(val clickListener: ListBankListener) :  ListAdapter<ListName, ListBankAdapter.ViewHolder>(BankDiffCallback()) {
+class editAdapter(val clickListener: ListBankListener) :  ListAdapter<ListName, editAdapter.ViewHolder>(BankDiffCallback()) {
 
     class ViewHolder(val binding: TextItemViewBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(
@@ -45,7 +45,7 @@ class ListBankAdapter(val clickListener: ListBankListener) :  ListAdapter<ListNa
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = getItem(position)
-        holder.binding.text.text = "Sum : "+item.name.toString()
+        holder.binding.text.text = "id : "+item.id.toString() +" "+item.name.toString()+" "+item.sername.toString()
         holder.bind(item!!, clickListener)
 
     }

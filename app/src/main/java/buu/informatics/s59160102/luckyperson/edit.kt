@@ -39,8 +39,19 @@ class edit : Fragment() {
 
 
         binding.viewModelEdit = ListPerson
-        ListPerson.name.observe(this, Observer { newSum ->
-                        binding.textView2.text = newSum.toString()
+//        ListPerson.name.observe(this, Observer { newSum ->
+//                        binding.textView2.text = newSum.toString()
+//        })
+
+        val adapter = editAdapter(ListBankListener { bankId ->
+            //            Toast.makeText(context, "${bankId}", Toast.LENGTH_SHORT).show()
+            ListPerson.onListClicked(bankId)
+        })
+
+        ListPerson.lists.observe(viewLifecycleOwner, Observer {
+            it?.let {
+                adapter.submitList(it)
+            }
         })
 
 
@@ -52,11 +63,11 @@ class edit : Fragment() {
 //        })
 
 
-        val adapter = ListBankAdapter(ListBankListener { bankId ->
-            //            Toast.makeText(context, "${bankId}", Toast.LENGTH_SHORT).show()
-            //viewModel.onBankClicked(bankId)
-
-        })
+//        val adapter = editAdapter(ListBankListener { bankId ->
+//            //            Toast.makeText(context, "${bankId}", Toast.LENGTH_SHORT).show()
+//            //viewModel.onBankClicked(bankId)
+//
+//        })
 
 
 
