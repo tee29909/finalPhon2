@@ -43,7 +43,7 @@ class edit : Fragment() {
 //                        binding.textView2.text = newSum.toString()
 //        })
 
-        val adapter = editAdapter(ListBankListener { bankId ->
+        val adapter = randomAdapter(ListBankListener { bankId ->
             //            Toast.makeText(context, "${bankId}", Toast.LENGTH_SHORT).show()
             ListPerson.onListClicked(bankId)
         })
