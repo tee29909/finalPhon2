@@ -17,7 +17,7 @@ class BankDiffCallback : DiffUtil.ItemCallback<ListName>() {
         return oldItem == newItem
     }
 }
-class editAdapter(val clickListener: ListBankListener) :  ListAdapter<ListName, randomAdapter.ViewHolder>(BankDiffCallback()) {
+class editAdapter(val clickListener: ListBankListener) :  ListAdapter<ListName, editAdapter.ViewHolder>(BankDiffCallback()) {
 
     class ViewHolder(val binding: TextItemViewBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(
