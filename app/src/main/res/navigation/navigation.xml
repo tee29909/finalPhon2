@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_home_to_edit2"
             app:destination="@id/edit2" />
+        <action
+            android:id="@+id/action_home_to_test"
+            app:destination="@id/test" />
     </fragment>
     <fragment
         android:id="@+id/random"
@@ -41,4 +44,8 @@
         android:id="@+id/about2"
         android:name="buu.informatics.s59160102.luckyperson.about"
         android:label="about" />
+    <fragment
+        android:id="@+id/test"
+        android:name="buu.informatics.s59160102.luckyperson.test"
+        android:label="test" />
 </navigation>

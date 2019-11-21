@@ -79,6 +79,10 @@ class edit : Fragment() {
 
         binding.LIstPersonAll.adapter = adapter
 
+        binding.Clear.setOnClickListener {
+            ListPerson.onClear()
+        }
+
 
         ListPerson.lists.observe(viewLifecycleOwner, Observer {
             it?.let {

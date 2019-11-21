@@ -18,7 +18,7 @@
 
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/bRandom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/RanomButton"
@@ -30,8 +30,9 @@
             app:layout_constraintVertical_bias="0.976" />
 
         <LinearLayout
-            android:layout_width="321dp"
-            android:layout_height="563dp"
+            android:id="@+id/linearLayout"
+            android:layout_width="318dp"
+            android:layout_height="492dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -41,8 +42,10 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/listRandom"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
         </LinearLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

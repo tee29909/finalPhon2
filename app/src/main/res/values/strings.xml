@@ -6,9 +6,12 @@
     <string name="about">about</string>
     <string name="share_success_text">about</string>
     <string name="share">Share</string>
-    <string name="Add" >Add</string>
-    <string name="Sername" >Sername</string>
-    <string name="Name" >Name</string>
+    <string name="Add">Add</string>
+    <string name="Sername">Sername</string>
+    <string name="Name">Name</string>
     <string name="RanomButton">Random</string>
+    <string name="test">test</string>
+    <string name="Clear">Clear</string>
+
 
 </resources>

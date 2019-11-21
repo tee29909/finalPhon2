@@ -28,7 +28,7 @@ class home : Fragment() {
         binding.buttonRandom.setOnClickListener { view -> view.findNavController().navigate(homeDirections.actionHome2ToRandom2(numRandom.text.toString().toInt())) }
         binding.Edit.setOnClickListener { view -> view.findNavController().navigate(homeDirections.actionHomeToEdit2()) }
 
-
+        binding.test.setOnClickListener {view -> view.findNavController().navigate(homeDirections.actionHomeToTest()) }
 
         setHasOptionsMenu(true)
         return binding.root
